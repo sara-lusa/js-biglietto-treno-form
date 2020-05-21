@@ -6,6 +6,12 @@
 }
 /* FINE RESET */
 
+/* Regole Generali */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Fine Regole Generali */
+
 /* Componenti */
 .hidden {
   display: none;
