@@ -6,6 +6,7 @@ var formKm = document.getElementById('form-km');
 var formEta = document.getElementById('form-eta');
 
 // Elementi biglietto
+var biglietto = document.getElementById('biglietto');
 var biglNome = document.getElementById('bigl-nome');
 var biglCosto = document.getElementById('bigl-costo');
 var biglCarrozza = document.getElementById('bigl-carrozza');
@@ -15,7 +16,6 @@ var biglOfferta = document.getElementById('bigl-offerta');
 // Evento Genera
 formGenera.addEventListener('click',
   function() {
-
     // Calcolo Costo
     var prezzo = formKm.value * 0.21;
 
@@ -35,16 +35,21 @@ formGenera.addEventListener('click',
     biglCosto.innerHTML = prezzo.toFixed(2) + ' Euro';
     biglCarrozza.innerHTML = Math.floor(Math.random() * 9) + 1;
     biglCodiceCp.innerHTML = Math.floor(Math.random() * 99999) + 1;
+
+    // Biglietto in vista
+    biglietto.className = 'biglietto block';
   }
 );
 
 // Evento Annulla
 formAnnulla.addEventListener('click',
   function() {
+    // Reset Form
     formNome.value = '';
     formKm.value = '';
     formEta.value = 'maggiorenne';
-    biglNome.innerHTML = '';
-    biglCosto.innerHTML = '0,00 Euro';
+
+    // Biglietto nascosto
+    biglietto.className = 'biglietto hidden';
   }
 );

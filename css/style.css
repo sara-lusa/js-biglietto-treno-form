@@ -6,9 +6,20 @@
 }
 /* FINE RESET */
 
+/* Componenti */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+/* Fine Componenti */
+
 /* INIZIO MAIN */
 main {
   background-color: #b91550;
+  height: 600px;
 }
 
 h2 {
@@ -44,9 +55,7 @@ section {
 
 .biglietto {
   background-color: white;
-  content: '';
-  display: table;
-  clear: both;
+  height: 180px;
   width: 100%;
   padding: 20px;
 }
