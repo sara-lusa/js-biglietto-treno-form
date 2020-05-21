@@ -13,13 +13,13 @@ var biglCarrozza = document.getElementById('bigl-carrozza');
 var biglCodiceCp = document.getElementById('bigl-codicecp');
 var biglOfferta = document.getElementById('bigl-offerta');
 
-// Evento Genera
+// Evento Button Genera
 formGenera.addEventListener('click',
   function() {
     // Calcolo Costo
     var prezzo = formKm.value * 0.21;
 
-    // Calcolo costo scontato
+    // Calcolo Costo Scontato
     if( formEta.value == 'minorenne' ) {
       prezzo = prezzo - ( prezzo * 20 / 100 )
       biglOfferta.innerHTML = 'Biglietto Scontato per Minorenni';
@@ -41,7 +41,7 @@ formGenera.addEventListener('click',
   }
 );
 
-// Evento Annulla
+// Evento Button Annulla
 formAnnulla.addEventListener('click',
   function() {
     // Reset Form

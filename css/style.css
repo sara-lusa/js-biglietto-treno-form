@@ -22,18 +22,21 @@ main {
   height: 600px;
 }
 
-h2 {
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 section {
   width: 80%;
   margin: 0 auto;
   padding: 40px 0;
 }
 
+h2 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Inizio Prima Section */
+/* Form */
 .form-box {
   background-color: white;
   padding: 20px;
@@ -53,6 +56,38 @@ section {
   margin: 0 20px;
 }
 
+.form-item label {
+  color: #b91550;
+  font-size: 0.9em;
+}
+
+.form-item input,
+.form-item select {
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #b91550;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.buttons button {
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: 900;
+  color: #b91550;
+  background-color: lightgrey;
+  margin-left: 10px;
+}
+
+.buttons button:active {
+  color: white;
+  background-color: grey;
+}
+/* Fine Prima Section */
+
+/* Inizio Seconda Section */
+/* BIGLIETTO */
 .biglietto {
   background-color: white;
   height: 180px;
@@ -60,17 +95,31 @@ section {
   padding: 20px;
 }
 
+.biglietto h3,
+.nome,
+.info > div p:first-child {
+  font-weight: 800;
+}
+
+.biglietto h3,
+.nome p:first-child {
+  text-transform: uppercase;
+}
+
 .nome, .info {
   float: left;
   height: 100px;
 }
 
+/* Nome */
 .nome {
   background-color: #7f7f7f;
   color: black;
   width: 30%;
+  padding:10px;
 }
 
+/* Info */
 .info {
   width: 70%;
   display: flex;
@@ -80,6 +129,13 @@ section {
 }
 
 .info > div {
-  padding-right: 10px;
+  padding-right: 15px;
 }
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Fine Seconda Section */
 /* FINE MAIN */
