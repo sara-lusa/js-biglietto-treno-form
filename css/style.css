@@ -41,4 +41,36 @@ section {
 .form-item {
   margin: 0 20px;
 }
+
+.biglietto {
+  background-color: white;
+  content: '';
+  display: table;
+  clear: both;
+  width: 100%;
+  padding: 20px;
+}
+
+.nome, .info {
+  float: left;
+  height: 100px;
+}
+
+.nome {
+  background-color: #7f7f7f;
+  color: black;
+  width: 30%;
+}
+
+.info {
+  width: 70%;
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.info > div {
+  padding-right: 10px;
+}
 /* FINE MAIN */
