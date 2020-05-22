@@ -31,7 +31,7 @@ main {
 section {
   width: 80%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 h2 {
@@ -76,6 +76,16 @@ h2 {
   margin-top: 10px;
 }
 
+.form-item input:focus,
+.form-item select:focus {
+  background-color: #b91550;
+  color: white;
+}
+
+.form-item input:focus::placeholder {
+  color: white;
+}
+
 /* Buttons */
 .buttons button {
   padding: 5px;
@@ -86,9 +96,16 @@ h2 {
   margin-left: 10px;
 }
 
-.buttons button:active {
+.buttons button:hover {
   color: white;
   background-color: grey;
+}
+
+/* Errore */
+.errore {
+  text-align: left;
+  font-weight: 600;
+  color: red;
 }
 /* Fine Prima Section */
 

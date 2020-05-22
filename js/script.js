@@ -1,6 +1,8 @@
+// Buttons
+var btnGenera = document.getElementById('btn-genera');
+var btnAnnulla = document.getElementById('btn-annulla');
+
 // Elementi form
-var formGenera = document.getElementById('form-genera');
-var formAnnulla = document.getElementById('form-annulla');
 var formNome = document.getElementById('form-nome');
 var formKm = document.getElementById('form-km');
 var formEta = document.getElementById('form-eta');
@@ -14,21 +16,26 @@ var biglCodiceCp = document.getElementById('bigl-codicecp');
 var biglOfferta = document.getElementById('bigl-offerta');
 
 // Evento Button Genera
-formGenera.addEventListener('click',
+btnGenera.addEventListener('click',
   function() {
     // Calcolo Costo
-    var prezzo = formKm.value * 0.21;
+    var prezzo = parseInt(formKm.value) * 0.21;
+    biglOfferta.innerHTML = 'Biglietto Standard';
 
     // Calcolo Costo Scontato
     if( formEta.value == 'minorenne' ) {
       prezzo = prezzo - ( prezzo * 20 / 100 )
       biglOfferta.innerHTML = 'Biglietto Scontato per Minorenni';
-    } else if( formEta.value == 'over' ) {
+    }
+
+    else if( formEta.value == 'over' ) {
       prezzo = prezzo - ( prezzo * 40 / 100 )
       biglOfferta.innerHTML = 'Biglietto Scontato per Over 65';
-    } else {
-      biglOfferta.innerHTML = 'Biglietto Standard';
     }
+    // 
+    // else {
+    //
+    // }
 
     // Scrittura Biglietto
     biglNome.innerHTML = formNome.value;
@@ -42,7 +49,7 @@ formGenera.addEventListener('click',
 );
 
 // Evento Button Annulla
-formAnnulla.addEventListener('click',
+btnAnnulla.addEventListener('click',
   function() {
     // Reset Form
     formNome.value = '';
