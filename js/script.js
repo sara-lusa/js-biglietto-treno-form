@@ -6,10 +6,9 @@ var btnAnnulla = document.getElementById('btn-annulla');
 var formNome = document.getElementById('form-nome');
 var formKm = document.getElementById('form-km');
 var formEta = document.getElementById('form-eta');
-var errore = document.getElementById('errore');
 
-console.log(formNome.value);
-console.log(formKm.value);
+// Errore
+var errore = document.getElementById('errore');
 
 // Elementi biglietto
 var biglietto = document.getElementById('biglietto');
@@ -31,7 +30,7 @@ btnGenera.addEventListener('click',
     else {
       // Nascondi errore
       errore.className = 'hidden';
-      
+
       // Calcolo Costo
       var prezzo = parseInt(formKm.value) * 0.21;
       biglOfferta.innerHTML = 'Biglietto Standard';
@@ -55,7 +54,6 @@ btnGenera.addEventListener('click',
 
       // Biglietto in vista
       biglietto.className = 'biglietto block';
-    }
     }
 
 );
