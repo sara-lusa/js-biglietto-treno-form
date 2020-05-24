@@ -23,7 +23,7 @@ btnGenera.addEventListener('click',
   function() {
 
     // Dati incorretti
-    if ( isNaN(formKm.value) || formKm.value == 0 || formNome.lenght == 0 ) {
+    if ( isNaN(formKm.value) || formKm.value <= 0 || formNome.lenght == 0 ) {
       errore.className = 'block';
     }
     // Dati corretti
@@ -55,7 +55,7 @@ btnGenera.addEventListener('click',
       // Biglietto in vista
       biglietto.className = 'biglietto block';
     }
-
+  }
 );
 
 // Evento Button Annulla
